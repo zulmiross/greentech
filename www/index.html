@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Template Tab</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <!--Ícones Remnix icon-->
+    <link rel="stylesheet" href="fonts/remix/fonts/remixicon.css">
+
+
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+
+            <!-- TAB BAR-->
+            <div class="toolbar toolbar-bottom">
+                <div class="toolbar-inner display-flex">
+                    <a href="/home/" class="tab-link link active">
+                        <i class="ri-home-5-line"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="/pesquisar/" class="tab-link link">
+                        <i class="ri-search-2-line"></i>
+                        <span>Pesquisar</span>
+                    </a>
+                    <a href="/favoritos/" class="tab-link link">
+                        <i class="ri-heart-3-line"></i>
+                        <span>Favoritos</span>
+                    </a>
+                    <a href="/perfil/" class="tab-link link">
+                        <i class="ri-user-line"></i>
+                        <span>Perfil</span>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="index" class="page color-theme-blue">
+
+                <!-- Top Navbar -->
+                <div class="top-navbar">
+                    <h1 class="title-logo"><span>Green</span>Tech</h1>
+                    <a href="#" class="btn-cart" data-count="0"><i class="ri-shopping-bag-line"></i></a>
+                </div>
+
+                <form action="#">
+                    <input placeholder="O que você busca?" type="text">
+                    <a class="icon-pesquisa" type="submit"><i class="ri-search-2-line"></i></a>
+                </form>
+
+
+                <!-- Scrollable page content -->
+                <div class="page-content">
+                    <div class="block">
+                        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="3" space-between="30" free-mode="true">
+                            <swiper-slide><img src="img/airpod.png" alt=""></swiper-slide>
+                        </swiper-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="js/swiper-element-bundle.min.js"></script>
+    <script src="cordova.js"></script>
+</body>
+
+</html>
