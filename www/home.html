@@ -70,9 +70,52 @@
                 <!-- Scrollable page content -->
                 <div class="page-content">
                     <div class="block">
-                        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="3" space-between="30" free-mode="true">
-                            <swiper-slide><img src="img/airpod.png" alt=""></swiper-slide>
-                        </swiper-container>
+                        <!-- Swiper Sliders -->
+                        <div class="swiper sliders">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="img/propaganda.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/propaganda2.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/propaganda3.png" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/propaganda4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+
+                        <div class="display-flex align-items-center justify-content-space-between">
+                            <h2>Categorias</h2>
+                            <a href="#">Ver todas <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                        <!-- Swiper Categories -->
+                        <div class="swiper categorias">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <button class="filter-btn active">Todas</button>
+                                </div>
+                                <div class="swiper-slide">
+                                    <button class="filter-btn">Esportes</button>
+                                </div>
+                                <div class="swiper-slide">
+                                    <button class="filter-btn">Lazer</button>
+                                </div>
+                                <div class="swiper-slide">
+                                    <button class="filter-btn">Eletrônicos</button>
+                                </div>
+                                <div class="swiper-slide">
+                                    <button class="filter-btn">Roupas</button>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -86,6 +129,8 @@
     <script type="text/javascript" src="js/routes.js"></script>
     <script src="js/swiper-element-bundle.min.js"></script>
     <script src="cordova.js"></script>
+
+
 </body>
 
 </html>
