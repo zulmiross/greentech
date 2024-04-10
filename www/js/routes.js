@@ -57,25 +57,26 @@ var app = new Framework7({
                         },
                     })
                     var swiper2 = new Swiper(".categorias", {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
+                        slidesPerView: 2,
+                        spaceBetween: 15,
+                        // centeredSlides: true,
                         loop: false,
                         breakpoints: {
                             50: {
-                                slidesPerView: 3,
-                                spaceBetween: 30,
+                                slidesPerView: 2,
+                                spaceBetween: 15,
                             },
                             640: {
                                 slidesPerView: 6,
-                                spaceBetween: 30,
+                                spaceBetween: 15,
                             },
                             940: {
                                 slidesPerView: 8,
-                                spaceBetween: 30,
+                                spaceBetween: 15,
                             },
                             1200: {
                                 slidesPerView: 10,
-                                spaceBetween: 30,
+                                spaceBetween: 15,
                             }
                         },
                     })
