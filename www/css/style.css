@@ -451,4 +451,46 @@ th {
 }
 
 
-/* Page Details  */
+/* Page Details End  */
+
+
+/* Page Cart  */
+
+.nav-top.cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    /* background: var(--black); */
+}
+
+.nav-top.cart a {
+    width: 47px;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--ice);
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--black);
+}
+
+.nav-top.cart a:nth-child(2) {
+    border: none;
+}
+
+.nav-top.cart i {
+    font-size: 1.5rem;
+}
+
+.nav-top.cart a:first-child {
+    margin-left: 20px;
+}
+
+.nav-top.cart a:last-child {
+    margin-right: 20px;
+}
+
+
+/* Page Cart End */
