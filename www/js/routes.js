@@ -4,7 +4,7 @@ var app = new Framework7({
     // App root element
     el: '#app',
     // App Name
-    name: 'My App',
+    name: 'Green Tech',
     // App id
     id: 'com.myapp.test',
     // Enable swipe panel
@@ -22,13 +22,16 @@ var app = new Framework7({
             animate: false,
             on: {
                 pageBeforeIn: function(event, page) {
-                    // fazer algo antes da página ser exibida
+                    // fazer algo antes da página ser exibida  
+                    $("#menuToolbar").show("fast");
                 },
                 pageAfterIn: function(event, page) {
                     // fazer algo depois da página ser exibida
                 },
                 pageInit: function(event, page) {
                     // fazer algo quando a página for inicializada
+                    app.views.main.router.navigate('/detalhes/')
+
                     $.getScript('js/home.js')
                     var swiper = new Swiper(".sliders", {
                         slidesPerView: 1,
@@ -132,6 +135,26 @@ var app = new Framework7({
             on: {
                 pageBeforeIn: function(event, page) {
                     // fazer algo antes da página ser exibida
+                },
+                pageAfterIn: function(event, page) {
+                    // fazer algo depois da página ser exibida
+                },
+                pageInit: function(event, page) {
+                    // fazer algo quando a página for inicializada
+                },
+                pageBeforeRemove: function(event, page) {
+                    // fazer algo antes da página ser removida do DOM
+                },
+            }
+        },
+        {
+            path: '/detalhes/',
+            url: 'detalhes.html',
+            animate: false,
+            on: {
+                pageBeforeIn: function(event, page) {
+                    // fazer algo antes da página ser exibida
+                    $("#menuToolbar").hide("fast");
                 },
                 pageAfterIn: function(event, page) {
                     // fazer algo depois da página ser exibida

@@ -9,11 +9,12 @@
     <!-- Color theme for statusbar (Android only) -->
     <meta name="theme-color" content="#2196f3">
     <!-- Your app title -->
-    <title>Template Tab</title>
+    <title>Green Tech</title>
     <!-- Path to Framework7 Library Bundle CSS -->
     <link rel="stylesheet" href="lib/framework7-bundle.min.css">
     <!-- CSS PERSONALIZADO PARA MENU-->
     <link rel="stylesheet" href="css/style.css">
+
     <!--Ícones Material Design-->
     <link rel="stylesheet" href="css/materialdesignicons.min.css">
     <!--Ícones Remnix icon-->
@@ -30,7 +31,7 @@
         <div class="view view-main">
 
             <!-- TAB BAR-->
-            <div class="toolbar toolbar-bottom">
+            <div id="menuToolbar" class="toolbar toolbar-bottom">
                 <div class="toolbar-inner display-flex">
                     <a href="/home/" class="tab-link link active">
                         <i class="ri-home-5-line"></i>
@@ -53,7 +54,7 @@
             </div>
 
             <!-- Initial Page, "data-name" contains page name -->
-            <div data-name="index" class="page color-theme-blue">
+            <div data-name="home" class="page color-theme-blue">
 
                 <!-- Top Navbar -->
                 <div class="top-navbar">
@@ -118,7 +119,7 @@
                         <div id="produtos" class="row display-flex align-items-center justify-content-start">
                             <!-- ITEM CARD  -->
                             <div class="item-card">
-                                <a href="#" class="item">
+                                <a href="/detalhes/" class="item">
                                     <div class="img-container">
                                         <img class="img-fluid" src="img/iphone.png" alt="">
                                     </div>

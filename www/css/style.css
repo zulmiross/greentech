@@ -175,7 +175,7 @@ h2 {
     height: 35px;
     background: none;
     border: 2px solid var(--black);
-    border-radius: 10px;
+    border-radius: 20px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -247,6 +247,7 @@ h2 {
 
 .price {
     font-size: 20px;
+    font-weight: 600;
 }
 
 @media(min-width:992px) {
@@ -260,3 +261,194 @@ h2 {
         flex: 20%;
     }
 }
+
+
+/* Page Details  */
+
+.page .toolbar {
+    background: var(--white);
+}
+
+.prod-details {
+    background: var(--ice);
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.prod-details img {
+    max-width: 400px;
+}
+
+.buttons-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 20px;
+}
+
+.buttons-top a {
+    background: var(--white);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border: 2px solid var(--ice);
+    color: var(--black);
+}
+
+.ri-heart-3-fill {
+    color: red;
+}
+
+.buttons-top a:first-child {
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+.buttons-top a:last-child {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+.prod-content {
+    margin-top: -50px;
+    background: var(--white);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: relative;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    padding-top: 10px;
+}
+
+.btn-promo {
+    width: 40%;
+    padding: 10px 5px;
+    background: #ef4d4e;
+    color: var(--white);
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-rates {
+    width: 80px;
+    color: var(--black);
+    padding: 10px;
+    margin-right: 5px;
+    background: none;
+    border: 2px solid var(--ice);
+    border-radius: 15px;
+}
+
+.btn-rates i {
+    font-size: 1rem;
+}
+
+.views {
+    color: var(--black);
+    font-size: 0.8rem;
+    letter-spacing: -0.5px;
+}
+
+.ri-star-fill {
+    color: orange
+}
+
+.ri-thumb-up-fill {
+    color: var(--green)
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+tr,
+td {
+    padding: 1px;
+    text-align: center;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #ddd;
+}
+
+.flex-40 {
+    flex: 40%;
+}
+
+.flex-60 {
+    flex: 60%;
+}
+
+.pricing {
+    text-align: left;
+    flex-flow: column;
+    margin-left: 30px;
+}
+
+.through {
+    top: 5px;
+    font-size: 0.9rem;
+    color: gray;
+    position: relative;
+}
+
+.through::after {
+    content: "";
+    position: absolute;
+    rotate: -5deg;
+    border: 0.8px solid red;
+    top: 50%;
+    width: 100%;
+    left: -2px;
+}
+
+.through::before {
+    content: "";
+    position: absolute;
+    rotate: 5deg;
+    border: 0.8px solid red;
+    top: 50%;
+    width: 100%;
+    left: -2px;
+}
+
+.add-cart {
+    height: 60px;
+    border: none;
+    background: var(--green);
+    color: var(--white);
+    font-size: clamp(2rem, 2vw, 3rem);
+    /* font-weight: 600; */
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+.add-cart span {
+    margin-bottom: -8px;
+    display: block;
+    font-size: 0.8rem;
+}
+
+
+/* Page Details  */
