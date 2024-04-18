@@ -19,7 +19,9 @@ var app = new Framework7({
     routes: [{
             path: '/home/',
             url: 'home.html',
-            animate: false,
+            options: {
+                transition: 'f7-cover-v'
+            },
             on: {
                 pageBeforeIn: function(event, page) {
                     // fazer algo antes da página ser exibida  
@@ -30,7 +32,7 @@ var app = new Framework7({
                 },
                 pageInit: function(event, page) {
                     // fazer algo quando a página for inicializada
-                    app.views.main.router.navigate('/carrinho/')
+                    // app.views.main.router.navigate('/carrinho/')
 
                     $.getScript('js/home.js')
                     var swiper = new Swiper(".sliders", {
@@ -170,7 +172,9 @@ var app = new Framework7({
         {
             path: '/carrinho/',
             url: 'carrinho.html',
-            animate: false,
+            options: {
+                transition: 'f7-cover',
+            },
             on: {
                 pageBeforeIn: function(event, page) {
                     // fazer algo antes da página ser exibida

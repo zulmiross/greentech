@@ -31,41 +31,123 @@
             <!-- Initial Page, "data-name" contains page name -->
             <div data-name="carrinho" class="page color-theme-blue">
                 <!-- TAB BAR-->
-                <div class="toolbar toolbar-bottom">
-                    <div class="toolbar-inner display-flex align-items-center justify-content-center">
-                        <div class="flex-40 pricing align-items-start justify-content-center">
-                            <span class="through">R$ 1800,00</span>
-                            <div class="price"><b><span style="font-size: 0.8rem;margin-right:-5px;">R$</span> 1.200,00</b></div>
+
+                <div style="margin-bottom: 120px;" class="toolbar toolbar-bottom">
+                    <div id="totais" class="border-top toolbar-inner display-flex align-items-center justify-content-space-between">
+                        <div class="w-80 margin-top display-flex align-items-center justify-content-space-between ">
+                            <span>Subtotal:</span>
+                            <span class="bold">R$ 12.000,00</span>
                         </div>
-                        <button onclick="" class="add-cart flex-60"><span>Adicionar ao</span> Carrinho</button>
+                        <div class="w-80 display-flex align-items-center justify-content-space-between ">
+                            <span>Frete:</span>
+                            <span class="bold">R$ 5,00</span>
+                        </div>
+                        <div class="w-80 display-flex align-items-center justify-content-space-between ">
+                            <span>Desconto:</span>
+                            <span class="bold">40%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="toolbar toolbar-bottom ">
+                    <div class="toolbar-inner display-flex align-items-center justify-content-center ">
+                        <div class="flex-100 ">
+                            <button onclick=" " class="add-cart checkout ">Comprar</button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Scrollable page content -->
-                <div class="page-content">
-                    <div class="nav-top cart">
-                        <a href="#">
-                            <i class="ri-arrow-left-s-line"></i>
+                <div class="page-content ">
+                    <div class="nav-top cart ">
+                        <a href="/home/">
+                            <i class="ri-arrow-left-s-line "></i>
                         </a>
                         <a href="#">
-                            <i class="ri-shopping-cart-line"></i> Carrinho
+                            <i class="ri-shopping-cart-line "></i> Carrinho
                         </a>
-                        <a href="#">
-                            <i class="ri-more-line"></i>
+                        <a href="#" class="link popover-open" data-popover=".popover-menu">
+                            <i class="ri-more-line "></i>
                         </a>
+                    </div>
+                    <!-- PROPOVER  -->
+                    <div class="popover popover-menu">
+                        <div class="popover-angle"></div>
+                        <div class="popover-inner">
+                            <div class="list">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="list-button popover-close"> <i class="mdi mdi-broom"></i>Esvaziar Carrinho</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PROPOVER  -->
+                    <div id="listaCarrinho ">
+                        <!-- ITEM CARRINHO  -->
+                        <div class="item-carrinho ">
+                            <div class="area-img ">
+                                <img src="img/default.png " alt>
+                            </div>
+                            <div class="area-details ">
+                                <div class="sup ">
+                                    <span class="name-prod ">X Box XS</span>
+                                    <a class="delete-item " href="#">
+                                        <i class="mdi mdi-close "></i>
+                                    </a>
+                                </div>
+                                <div class="middle ">
+                                    <span>1TB</span>
+                                </div>
+                                <div class="preco-qtde ">
+                                    <span>R$ 19.990,00</span>
+                                    <div class="count ">
+                                        <a href="# " class="minus ">-</a>
+                                        <input readonly class="item-qtde " value="1 " type="text ">
+                                        <a href="# " class="plus ">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ITEM CARRINHO  -->
+                        <div class="item-carrinho ">
+                            <div class="area-img ">
+                                <img src="img/default.png " alt>
+                            </div>
+                            <div class="area-details ">
+                                <div class="sup ">
+                                    <span class="name-prod ">X Box XS</span>
+                                    <a class="delete-item " href="#">
+                                        <i class="mdi mdi-close "></i>
+                                    </a>
+                                </div>
+                                <div class="middle ">
+                                    <span>1TB</span>
+                                </div>
+                                <div class="preco-qtde ">
+                                    <span>R$ 19.990,00</span>
+                                    <div class="count ">
+                                        <a href="# " class="minus ">-</a>
+                                        <input readonly class="item-qtde " value="1 " type="text ">
+                                        <a href="# " class="plus ">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Path to Framework7 Library Bundle JS-->
-    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+    <script type="text/javascript " src="lib/framework7-bundle.min.js "></script>
     <!-- jQuery -->
-    <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript " src="lib/jquery-3.7.0.min.js "></script>
     <!-- Roteamento do app-->
-    <script type="text/javascript" src="js/routes.js"></script>
-    <script src="js/swiper-element-bundle.min.js"></script>
-    <script src="cordova.js"></script>
+    <script type="text/javascript " src="js/routes.js "></script>
+    <script src="js/swiper-element-bundle.min.js "></script>
+    <script src="cordova.js "></script>
 
 </body>
 

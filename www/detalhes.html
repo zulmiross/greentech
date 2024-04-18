@@ -3,31 +3,28 @@
 
 <head>
     <!-- Required meta tags-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- Color theme for statusbar (Android only) -->
-    <meta name="theme-color" content="#2196f3">
+    <meta name="theme-color" content="#2196f3" />
     <!-- Your app title -->
     <title>Green Tech</title>
     <!-- Path to Framework7 Library Bundle CSS -->
-    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css" />
     <!-- CSS PERSONALIZADO PARA MENU-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <!--Ícones Material Design-->
-    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="css/materialdesignicons.min.css" />
     <!--Ícones Remnix icon-->
-    <link rel="stylesheet" href="fonts/remix/fonts/remixicon.css">
-
+    <link rel="stylesheet" href="fonts/remix/fonts/remixicon.css" />
 </head>
 
 <body>
     <!-- App root element -->
     <div id="app">
-
         <!-- Your main view, should have "view-main" class -->
         <div class="view view-main">
-
             <!-- Initial Page, "data-name" contains page name -->
             <div data-name="detalhes" class="page color-theme-blue">
                 <!-- TAB BAR-->
@@ -35,9 +32,15 @@
                     <div class="toolbar-inner display-flex align-items-center justify-content-center">
                         <div class="flex-40 pricing align-items-start justify-content-center">
                             <span class="through">R$ 1800,00</span>
-                            <div class="price"><b><span style="font-size: 0.8rem;margin-right:-5px;">R$</span> 1.200,00</b></div>
+                            <div class="price">
+                                <b><span
+                                            style="font-size: 0.8rem; margin-right: -5px">R$</span>
+                                        1.200,00</b>
+                            </div>
                         </div>
-                        <button onclick="" class="add-cart flex-60"><span>Adicionar ao</span> Carrinho</button>
+                        <button onclick class="add-cart flex-60">
+                                <span>Adicionar ao</span> Carrinho
+                            </button>
                     </div>
                 </div>
 
@@ -45,7 +48,7 @@
                 <div class="page-content">
                     <div class="prod-details">
                         <div class="buttons-top">
-                            <a href="#">
+                            <a href="/home/">
                                 <i class="ri-arrow-left-s-line"></i>
                             </a>
                             <a href="#">
@@ -55,7 +58,7 @@
                                 <i class="ri-share-2-line"></i>
                             </a>
                         </div>
-                        <img src="img/default.png" alt>
+                        <img src="img/default.png" alt />
                     </div>
                     <div class="prod-content">
                         <div class="block">
@@ -65,16 +68,19 @@
                                         Promoção</button>
                             </div>
                             <div class="margin-left display-flex align-items-center justify-content-start">
-                                <button class="btn-rates"><i
-                                            class="ri-star-fill"></i>
-                                        <b>4.8</b></button>
-                                <button class="btn-rates"><i
-                                            class="ri-thumb-up-fill"></i>
-                                        <b>91%</b></button>
+                                <button class="btn-rates">
+                                        <i class="ri-star-fill"></i> <b>4.8</b>
+                                    </button>
+                                <button class="btn-rates">
+                                        <i class="ri-thumb-up-fill"></i>
+                                        <b>91%</b>
+                                    </button>
                                 <span class="views">100 visualizações</span>
                             </div>
-                            <div class=" margin-left align-items-center justify-content-center">
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, itaque? Sunt molestiae repudiandae illum earum magni, corporis quis voluptas impedit magnam cum id officia reiciendis, aut, eveniet modi nihil! Ratione?</p>
+                            <div class="margin-left align-items-center justify-content-center">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, itaque? Sunt molestiae repudiandae illum earum magni, corporis quis voluptas impedit magnam cum id officia reiciendis, aut, eveniet modi nihil! Ratione?
+                                </p>
                             </div>
                             <table>
                                 <tr>
@@ -86,7 +92,8 @@
                                     <td>Muito mais util que qulaier outro
                                     </td>
                                 </tr>
-                            </table><br><br><br>
+                            </table>
+                            <br /><br /><br />
                         </div>
                     </div>
                 </div>
@@ -101,7 +108,6 @@
     <script type="text/javascript" src="js/routes.js"></script>
     <script src="js/swiper-element-bundle.min.js"></script>
     <script src="cordova.js"></script>
-
 </body>
 
 </html>
