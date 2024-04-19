@@ -5,6 +5,10 @@
     --black: #2a2a2a;
 }
 
+.gelo {
+    background: var(--ice) !important;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 body {
     font-family: "Bebas Neue", sans-serif;
@@ -233,6 +237,14 @@ h2 {
     padding-top: 10px;
 }
 
+.name-rating span:first-child {
+    width: 65% !important;
+    /* background: red; */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .color-gray {
     color: gray;
 }
@@ -246,7 +258,7 @@ h2 {
 }
 
 .price {
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 600;
 }
 

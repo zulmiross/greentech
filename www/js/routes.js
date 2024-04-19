@@ -162,7 +162,8 @@ var app = new Framework7({
                     // fazer algo depois da página ser exibida
                 },
                 pageInit: function(event, page) {
-                    // fazer algo quando a página for inicializada
+                    $.getScript('js/detalhes.js')
+                        // fazer algo quando a página for inicializada
                 },
                 pageBeforeRemove: function(event, page) {
                     // fazer algo antes da página ser removida do DOM
