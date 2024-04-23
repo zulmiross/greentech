@@ -31,11 +31,9 @@
                 <div class="toolbar toolbar-bottom">
                     <div class="toolbar-inner display-flex align-items-center justify-content-center">
                         <div class="flex-40 pricing align-items-start justify-content-center">
-                            <span class="through">R$ 1800,00</span>
+                            <span id="preco-detalhe" class="through"></span>
                             <div class="price">
-                                <b><span
-                                            style="font-size: 0.8rem; margin-right: -5px">R$</span>
-                                        1.200,00</b>
+                                <b style="font-size: clamp(1.3rem, 1vw, 1.8rem);font-weight:bold;" id="precopromo-detalhe"></b>
                             </div>
                         </div>
                         <button onclick class="add-cart flex-60">
@@ -68,28 +66,22 @@
                             </div>
                             <div class="margin-left display-flex align-items-center justify-content-start">
                                 <button class="btn-rates">
-                                        <i class="ri-star-fill"></i> <b id="rating-detalhe">4.8</b>
+                                        <i class="ri-star-fill"></i>
+                                        <b id="rating-detalhe"></b>
                                     </button>
                                 <button class="btn-rates">
                                         <i class="ri-thumb-up-fill"></i>
-                                        <b id="likes-detalhes">91%</b>
+                                        <b id="likes-detalhes"></b>
                                     </button>
-                                <span id="reviews-detalhe" class="views">100 visualizações</span>
+                                <span id="reviews-detalhe" class="views"></span>
                             </div>
                             <div class="margin-left align-items-center justify-content-center">
-                                <p>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed, itaque? Sunt molestiae repudiandae illum earum magni, corporis quis voluptas impedit magnam cum id officia reiciendis, aut, eveniet modi nihil! Ratione?
-                                </p>
+                                <p id="descricao-detalhe"></p>
                             </div>
-                            <table>
+                            <table id="tabdetalhes">
                                 <tr>
                                     <th>Características</th>
                                     <th>Detalhes</th>
-                                </tr>
-                                <tr>
-                                    <td>Lindo</td>
-                                    <td>Muito mais util que qulaier outro
-                                    </td>
                                 </tr>
                             </table>
                             <br /><br /><br />

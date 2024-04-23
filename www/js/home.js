@@ -5,13 +5,15 @@ fetch("js/backend.json")
         localStorage.setItem('produtos', JSON.stringify(data))
         console.log("Dados salvos em local storage com sucesso!")
 
-        // limpan do tabela produtos 
-        $("#produtos").empty();
+        // simulando carregamento online 
+        setTimeout(function() {
+            // limpando tabela produtos 
+            $("#produtos").empty();
 
-        // recuperando dados de localstorage e exibindo no DOM 
-        data.forEach(produto => {
+            // recuperando dados de localstorage e exibindo no DOM 
+            data.forEach(produto => {
 
-            var produtosHTML = `
+                var produtosHTML = `
                     <!-- ITEM CARD  -->
                     <div class="item-card">
                         <a data-id="${produto.id}" href="#" class="item">
@@ -25,23 +27,29 @@ fetch("js/backend.json")
                                 </span>
                             </div>
                             <div class="price">
-                                R$ ${produto.preco_promocional}
+                                ${produto.preco_promocional.toLocaleString('pt-BR', {style:'currency', currency: 'BRL'})}
                             </div>
                         </a>
                     </div>
                  `
 
-            $("#produtos").append(produtosHTML)
+                $("#produtos").append(produtosHTML)
 
-        })
+            })
+
+            $(".item").on('click', function() {
+                var id = $(this).attr('data-id')
+                console.log(id)
+                localStorage.setItem("detalhe", id)
+                app.views.main.router.navigate('/detalhes/')
+            })
 
 
-        $(".item").on('click', function() {
-            var id = $(this).attr('data-id')
-            console.log(id)
-            localStorage.setItem("detalhe", id)
-            app.views.main.router.navigate('/detalhes/')
-        })
+        }, 1000)
+
+
+
+
 
 
 
@@ -49,3 +57,9 @@ fetch("js/backend.json")
 
     })
     .catch(error => console.error("Nao foi possível carregar dados" + error))
+
+
+setTimeout(function() {
+    var contador_carrinho = JSON.parse(localStorage.getItem('carrinho')) || []
+    $(".btn-cart").attr("data-count", contador_carrinho.length)
+}, 300)

@@ -16,6 +16,10 @@ body {
     font-style: normal;
 }
 
+p {
+    text-align: justify;
+}
+
 .toolbar {
     height: 80px;
 }
@@ -393,8 +397,8 @@ table {
 
 tr,
 td {
-    padding: 1px;
-    text-align: center;
+    padding: 8px 5px;
+    text-align: justify;
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
@@ -644,7 +648,7 @@ th {
     flex: 80%;
 }
 
-#totais {
+#toolbar-totais {
     flex-direction: column;
     padding: 8px 15px;
 }
