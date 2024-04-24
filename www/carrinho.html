@@ -31,79 +31,74 @@
             <!-- Initial Page, "data-name" contains page name -->
             <div data-name="carrinho" class="page color-theme-blue">
                 <!-- TAB BAR-->
-                <div style="margin-bottom:80px;" class="toolbar toolbar-bottom">
+
+                <div style="margin-bottom: 80px;" class="toolbar toolbar-bottom">
                     <div id="toolbar-totais" class="border-top toolbar-inner display-flex align-items-center justify-content-space-between">
                         <div class="w-80 margin-top display-flex align-items-center justify-content-space-between ">
                             <span>Subtotal:</span>
                             <span id="subtotal" class="bold"></span>
-                            <div style="margin-bottom: 120px;" class="toolbar toolbar-bottom">
-                                <div id="toolbar-totais" class="border-top toolbar-inner display-flex align-items-center justify-content-space-between">
-                                    <div class="w-80 margin-top display-flex align-items-center justify-content-space-between ">
-                                        <span>Subtotal:</span>
-                                        <span id="subtotal" class="bold"></span>
-                                    </div>
-                                    <div class="w-80 display-flex align-items-center justify-content-space-between ">
-                                        <span>Frete:</span>
-                                        <span class="bold">R$ 5,00</span>
-                                    </div>
-                                    <div class="w-80 display-flex align-items-center justify-content-space-between ">
-                                        <span>Desconto:</span>
-                                        <span class="bold">40%</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div id="toolbar-checkout" class="toolbar toolbar-bottom ">
-                                <div class="toolbar-inner display-flex align-items-center justify-content-center ">
-                                    <div class="flex-100 ">
-                                        <button onclick=" " class="add-cart checkout ">Comprar</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Scrollable page content -->
-                            <div class="page-content ">
-                                <div class="nav-top cart ">
-                                    <a href="/home/">
-                                        <i class="ri-arrow-left-s-line "></i>
-                                    </a>
-                                    <a href="#">
-                                        <i class="ri-shopping-cart-line"></i> Carrinho
-                                    </a>
-                                    <a href="#" class="link popover-open" data-popover=".popover-menu">
-                                        <i class="ri-more-line "></i>
-                                    </a>
-                                </div>
-                                <!-- PROPOVER  -->
-                                <div class="popover popover-menu">
-                                    <div class="popover-angle"></div>
-                                    <div class="popover-inner">
-                                        <div class="list">
-                                            <ul>
-                                                <li>
-                                                    <a id="esvaziar-carrinho" href="#" class="list-button popover-close">
-                                                        <i class="mdi mdi-broom"></i>Esvaziar Carrinho
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- PROPOVER  -->
-                                <div id="lista-carrinho">
-                                </div><br><br><br><br><br>
-                            </div>
+                        </div>
+                        <div class="w-80 display-flex align-items-center justify-content-space-between ">
+                            <span>Frete:</span>
+                            <span class="bold">R$ 5,00</span>
+                        </div>
+                        <div class="w-80 display-flex align-items-center justify-content-space-between ">
+                            <span>Desconto:</span>
+                            <span class="bold">40%</span>
                         </div>
                     </div>
                 </div>
-                <!-- Path to Framework7 Library Bundle JS-->
-                <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
-                <!-- jQuery -->
-                <script type="text/javascript " src="lib/jquery-3.7.0.min.js"></script>
-                <!-- Roteamento do app-->
-                <script type="text/javascript " src="js/routes.js"></script>
-                <script src="js/swiper-element-bundle.min.js"></script>
-                <script src="cordova.js"></script>
+
+                <div id="toolbar-checkout" class="toolbar toolbar-bottom ">
+                    <div class="toolbar-inner display-flex align-items-center justify-content-center ">
+                        <div class="flex-100 ">
+                            <button onclick=" " class="add-cart checkout ">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="page-content ">
+                    <div class="nav-top cart ">
+                        <a href="/home/">
+                            <i class="ri-arrow-left-s-line "></i>
+                        </a>
+                        <a href="#">
+                            <i class="ri-shopping-cart-line"></i> Carrinho
+                        </a>
+                        <a href="#" class="link popover-open" data-popover=".popover-menu">
+                            <i class="ri-more-line "></i>
+                        </a>
+                    </div>
+                    <!-- PROPOVER  -->
+                    <div class="popover popover-menu">
+                        <div class="popover-angle"></div>
+                        <div class="popover-inner">
+                            <div class="list">
+                                <ul>
+                                    <li>
+                                        <a id="esvaziar-carrinho" href="#" class="list-button popover-close">
+                                            <i class="mdi mdi-broom"></i>Esvaziar Carrinho
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PROPOVER  -->
+                    <div id="lista-carrinho"></div><br><br><br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript " src="lib/jquery-3.7.0.min.js"></script>
+    <!-- Roteamento do app-->
+    <script type="text/javascript " src="js/routes.js"></script>
+    <script src="js/swiper-element-bundle.min.js"></script>
+    <script src="cordova.js"></script>
 
 </body>
 

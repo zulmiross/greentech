@@ -1,61 +1,59 @@
-var itensNoCarrinho = localStorage.getItem('carrinho')
+var itensNoCarrinho = localStorage.getItem('carrinho');
 
 if (itensNoCarrinho) {
 
-    var carrinho = JSON.parse(itensNoCarrinho)
-    console.log(carrinho)
+    var carrinho = JSON.parse(itensNoCarrinho);
+    // console.log(carrinho);
 
     if (carrinho.length > 0) {
         // ITENS NO CARRINHO 
         // RENDERIZAR CARRINHO
         renderizarCarrinho();
         // SOMA O TOTAL DOS ITENS 
-        totalCarrinho()
+        totalCarrinho();
 
     } else {
         // CARRINHO VAZIO 
-        carrinhoVazio()
+        carrinhoVazio();
     }
 
 } else {
     //CARRINHO VAZIO
-    carrinhoVazio()
+    carrinhoVazio();
 }
 
 function renderizarCarrinho() {
 
     $("#lista-carrinho").empty();
     $.each(carrinho, function(index, itemCarrinho) {
-        var itemDiv = `        
-            <!-- ITEM CARRINHO  -->
-            <div class="item-carrinho">
-            <div class="item-carrinho" data-index="${index}">
-                <div class="area-img ">
-                    <img src="${itemCarrinho.item.imagem}" alt>
+        var itemDiv = `
+        
+        <!-- ITEM CARRINHO  -->
+        <div class="item-carrinho" data-index="${index}">
+            <div class="area-img ">
+                <img src="${itemCarrinho.item.imagem}" alt>
+            </div>
+            <div class="area-details">
+                <div class="sup">
+                    <span class="name-prod">${itemCarrinho.item.nome}</span>
+                    <a class="delete-item" href="#">
+                        <i class="mdi mdi-close"></i>
+                    </a>
                 </div>
-                <div class="area-details">
-                    <div class="sup">
-                        <span class="name-prod">${itemCarrinho.item.nome}</span>
-                        <a data-index="${index}" class="delete-item" href="#">
-                        <a class="delete-item" href="#">
-                            <i class="mdi mdi-close"></i>
-                        </a>
-                    </div>
-                    <div class="middle ">
-                        <span>${itemCarrinho.item.principal_caracteristica}</span>
-                    </div>
-                    <div class="preco-qtde ">
-                        <span>${itemCarrinho.item.preco_promocional.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
-                        <div class="count ">
-                            <a href="#" class="minus" data-index="${index}">-</a>
-                            <input readonly class="item-qtde " value="${itemCarrinho.quantidade}" type="text ">
-                            <a href="#" class="plus" data-index="${index}">+</a>
-                        </div>
+                <div class="middle ">
+                    <span>${itemCarrinho.item.principal_caracteristica}</span>
+                </div>
+                <div class="preco-qtde ">
+                    <span>${itemCarrinho.item.preco_promocional.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}</span>
+                    <div class="count ">
+                        <a href="#" class="minus" data-index="${index}">-</a>
+                        <input readonly class="item-qtde " value="${itemCarrinho.quantidade}" type="text ">
+                        <a href="#" class="plus" data-index="${index}">+</a>
                     </div>
                 </div>
-                </div>
-            </div> 
-        `;
+            </div>
+        </div> 
+    `;
 
         $("#lista-carrinho").append(itemDiv);
 
@@ -66,9 +64,10 @@ function renderizarCarrinho() {
         // console.log(index)
 
         app.dialog.confirm("Deseja remover este item?", "REMOVER", function() {
-            carrinho.splice(index, 1)
-            localStorage.setItem('carrinho', JSON.stringify(carrinho))
-            app.views.main.router.refreshPage()
+            carrinho.splice(index, 1);
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            app.views.main.router.refreshPage();
+
         })
     });
 
@@ -79,14 +78,19 @@ function renderizarCarrinho() {
             carrinho[index].quantidade--;
             carrinho[index].total_item = carrinho[index].quantidade * carrinho[index].item.preco_promocional;
             localStorage.setItem('carrinho', JSON.stringify(carrinho));
-            app.views.main.router.refreshPage();
+            // app.views.main.router.refreshPage();
+            renderizarCarrinho();
+            totalCarrinho();
         } else {
             var nomeItem = carrinho[index].item.nome;
             app.dialog.confirm(`Deseja remover o item <strong>${nomeItem}</strong>?`, "<strong><small>REMOVER</small></strong>", function() {
                 carrinho.splice(index, 1);
                 localStorage.setItem('carrinho', JSON.stringify(carrinho));
-                app.views.main.router.refreshPage();
-            })
+                renderizarCarrinho();
+                totalCarrinho();
+                if (carrinho.length <= 0) app.views.main.router.refreshPage();
+
+            });
         }
     });
 
@@ -96,7 +100,9 @@ function renderizarCarrinho() {
         carrinho[index].quantidade++;
         carrinho[index].total_item = carrinho[index].quantidade * carrinho[index].item.preco_promocional;
         localStorage.setItem('carrinho', JSON.stringify(carrinho));
-        app.views.main.router.refreshPage();
+        renderizarCarrinho();
+        totalCarrinho();
+        if (carrinho.length <= 0) app.views.main.router.refreshPage();
 
     });
 
@@ -107,7 +113,7 @@ function totalCarrinho() {
     var totalItems = 0;
     $.each(carrinho, function(index, itemCarrinho) {
         totalItems += itemCarrinho.total_item;
-        $("#subtotal").html(totalItems.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }))
+        $("#subtotal").html(totalItems.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }));
     })
 }
 
@@ -116,15 +122,15 @@ function carrinhoVazio() {
     $("#lista-carrinho").empty();
 
     $("#lista-carrinho").html(`
-        <div class="text-align-center">
-            <img width="300" src="img/empty.gif" />
-            <br><span class="color-gray">Carrinho vazio</span>
-        </div>
-    `);
+            <div class="text-align-center">
+                <img width="300" src="img/empty.gif" />
+                <br><span class="color-gray">Carrinho vazio</span>
+            </div>
+        `);
 
 
-    $("#toolbar-checkout").addClass('display-none')
-    $("#toolbar-totais").addClass('display-none')
+    $("#toolbar-checkout").addClass('display-none');
+    $("#toolbar-totais").addClass('display-none');
 
 }
 
