@@ -2,7 +2,7 @@
 <widget id="br.com.greentech" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Green Tech</name>
     <description>App primeiro projeto CORDOVA</description>
-    <author email="zulejesus@hotail.com" href="https://cordova.apache.org">
+    <author email="zulejesus@hotmail.com" href="https://cordova.apache.org">
         Zulmiro S S
     </author>
     <content src="index.html" />
