@@ -26,10 +26,10 @@ function renderizarCarrinho() {
 
     $("#lista-carrinho").empty();
     $.each(carrinho, function(index, itemCarrinho) {
-        var itemDiv = `
-        
+        var itemDiv = `        
             <!-- ITEM CARRINHO  -->
             <div class="item-carrinho">
+            <div class="item-carrinho" data-index="${index}">
                 <div class="area-img ">
                     <img src="${itemCarrinho.item.imagem}" alt>
                 </div>
@@ -37,6 +37,7 @@ function renderizarCarrinho() {
                     <div class="sup">
                         <span class="name-prod">${itemCarrinho.item.nome}</span>
                         <a data-index="${index}" class="delete-item" href="#">
+                        <a class="delete-item" href="#">
                             <i class="mdi mdi-close"></i>
                         </a>
                     </div>
@@ -52,12 +53,13 @@ function renderizarCarrinho() {
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+            </div> 
         `;
 
         $("#lista-carrinho").append(itemDiv);
 
-    })
+    });
 
     $(".delete-item").on('click', function() {
         var index = $(this).data('index');
@@ -68,7 +70,7 @@ function renderizarCarrinho() {
             localStorage.setItem('carrinho', JSON.stringify(carrinho))
             app.views.main.router.refreshPage()
         })
-    })
+    });
 
     $(".minus").on('click', function() {
         var index = $(this).data('index');
@@ -86,7 +88,7 @@ function renderizarCarrinho() {
                 app.views.main.router.refreshPage();
             })
         }
-    })
+    });
 
     $(".plus").on('click', function() {
         var index = $(this).data('index');
@@ -96,11 +98,10 @@ function renderizarCarrinho() {
         localStorage.setItem('carrinho', JSON.stringify(carrinho));
         app.views.main.router.refreshPage();
 
-    })
+    });
 
 
 }
-
 
 function totalCarrinho() {
     var totalItems = 0;
@@ -132,4 +133,4 @@ $("#esvaziar-carrinho").on('click', function() {
         localStorage.removeItem('carrinho');
         app.views.main.router.refreshPage();
     })
-})
+});
